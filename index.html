@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joytopia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Joytopia</h1>
+    <p>Create your avatar</p>
+  </header>
+
+  <main>
+    <div class="avatar-container">
+      <div class="player" id="player">
+        
+        <div class="head"></div>
+
+        <div class="body">
+          <div class="arm left"></div>
+          <div class="torso"></div>
+          <div class="arm right"></div>
+        </div>
+
+        <div class="legs">
+          <div class="leg left"></div>
+          <div class="leg right"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="walk()">Walk</button>
+      <button onclick="stop()">Stop</button>
+      <button onclick="randomColor()">Random Outfit</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
