@@ -1,22 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #4a90e2, #87ceeb);
+}
+
+/* TOP BAR */
+.topbar {
+  background: #222;
+  color: white;
+  padding: 15px;
   text-align: center;
-  background: linear-gradient(to bottom, #87ceeb, #ffffff);
 }
 
-header {
-  margin-top: 20px;
-}
-
-.avatar-container {
-  margin-top: 50px;
+/* CARD UI (ROUNDED CORNERS) */
+.card {
+  background: white;
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 20px; /* 🔥 corners added */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* PLAYER */
+.avatar-container {
+  perspective: 800px; /* fake 3D */
+}
+
 .player {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: rotateX(10deg);
 }
 
 /* HEAD */
@@ -24,25 +39,26 @@ header {
   width: 60px;
   height: 60px;
   background: #f5c6a5;
-  border-radius: 50%;
+  border-radius: 12px;
 }
 
 /* BODY */
 .body {
   display: flex;
-  align-items: center;
 }
 
 .torso {
   width: 60px;
   height: 80px;
   background: #4a90e2;
+  border-radius: 10px;
 }
 
 .arm {
   width: 20px;
   height: 80px;
   background: #f5c6a5;
+  border-radius: 10px;
 }
 
 /* LEGS */
@@ -55,16 +71,17 @@ header {
   height: 80px;
   background: #333;
   margin: 3px;
+  border-radius: 10px;
   transform-origin: top;
 }
 
-/* WALK ANIMATION */
+/* WALK */
 .walk .leg.left {
-  animation: leftLeg 0.5s infinite alternate;
+  animation: leftLeg 0.4s infinite alternate;
 }
 
 .walk .leg.right {
-  animation: rightLeg 0.5s infinite alternate;
+  animation: rightLeg 0.4s infinite alternate;
 }
 
 @keyframes leftLeg {
@@ -78,15 +95,11 @@ header {
 }
 
 /* BUTTONS */
-.controls {
-  margin-top: 30px;
-}
-
 button {
-  padding: 10px 20px;
+  padding: 10px;
   margin: 5px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #4a90e2;
   color: white;
   cursor: pointer;
@@ -94,4 +107,30 @@ button {
 
 button:hover {
   background: #357abd;
+}
+
+/* GAMES */
+.games {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.game {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 15px;
+  width: 120px;
+  transition: 0.2s;
+}
+
+.game:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 80px;
+  background: #999;
+  border-radius: 10px;
 }
