@@ -7,12 +7,16 @@
 </head>
 <body>
 
-  <header>
-    <h1>🎮 Joytopia</h1>
-    <p>Create your avatar</p>
-  </header>
+<header class="topbar">
+  <h1>🎮 Joytopia</h1>
+</header>
 
-  <main>
+<main>
+
+  <!-- PLAYER PREVIEW -->
+  <section class="card">
+    <h2>Your Avatar</h2>
+
     <div class="avatar-container">
       <div class="player" id="player">
         
@@ -37,8 +41,32 @@
       <button onclick="stop()">Stop</button>
       <button onclick="randomColor()">Random Outfit</button>
     </div>
-  </main>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- GAMES SECTION -->
+  <section class="card">
+    <h2>Games</h2>
+
+    <div class="games">
+      <div class="game">
+        <div class="thumbnail"></div>
+        <p>Obby World</p>
+      </div>
+
+      <div class="game">
+        <div class="thumbnail"></div>
+        <p>Speed Run</p>
+      </div>
+
+      <div class="game">
+        <div class="thumbnail"></div>
+        <p>Joy Battle</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
