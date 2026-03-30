@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+}
+
+header {
+  margin-top: 20px;
+}
+
+.avatar-container {
+  margin-top: 50px;
+}
+
+/* PLAYER */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEAD */
+.head {
+  width: 60px;
+  height: 60px;
+  background: #f5c6a5;
+  border-radius: 50%;
+}
+
+/* BODY */
+.body {
+  display: flex;
+  align-items: center;
+}
+
+.torso {
+  width: 60px;
+  height: 80px;
+  background: #4a90e2;
+}
+
+.arm {
+  width: 20px;
+  height: 80px;
+  background: #f5c6a5;
+}
+
+/* LEGS */
+.legs {
+  display: flex;
+}
+
+.leg {
+  width: 25px;
+  height: 80px;
+  background: #333;
+  margin: 3px;
+  transform-origin: top;
+}
+
+/* WALK ANIMATION */
+.walk .leg.left {
+  animation: leftLeg 0.5s infinite alternate;
+}
+
+.walk .leg.right {
+  animation: rightLeg 0.5s infinite alternate;
+}
+
+@keyframes leftLeg {
+  from { transform: rotate(20deg); }
+  to { transform: rotate(-20deg); }
+}
+
+@keyframes rightLeg {
+  from { transform: rotate(-20deg); }
+  to { transform: rotate(20deg); }
+}
+
+/* BUTTONS */
+.controls {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357abd;
+}
